@@ -10,7 +10,7 @@ class AdyenGateway
     @api_key = API_KEY
     @terminal = TERMINAL
     @endpoint = URI('https://terminal-api-test.adyen.com/sync')
-    @service_id = 1000000237
+    @service_id = 1000000337
     @https = Net::HTTP.new(@endpoint.host, @endpoint.port)
     @https.use_ssl = true
   end
