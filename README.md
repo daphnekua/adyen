@@ -5,9 +5,9 @@ This integration lets you connect with Adyen's POS via API.
 ## Integration
 
 The integration supports the following: 
-	• The ability to process a payment: payment_request
-	• The ability to cancel a payment: abort_request
- 	• The ability to query a cards details: card_acquisiton
+- The ability to process a payment: payment_request
+- The ability to cancel a payment: abort_request
+- The ability to query a cards details: card_acquisiton
 
 ## Requirements
 
