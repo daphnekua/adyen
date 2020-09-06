@@ -20,7 +20,7 @@ class Start
         amount = gets.chomp.to_f
 
         puts 'This is processing... One moment please.'
-        @client.make_payment({ price: amount })
+        @client.payment_request({ price: amount })
       when '2'
         puts 'This is processing... One moment please.'
         @client.abort_request

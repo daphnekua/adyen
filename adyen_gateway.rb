@@ -10,12 +10,12 @@ class AdyenGateway
     @api_key = API_KEY
     @terminal = TERMINAL
     @endpoint = URI('https://terminal-api-test.adyen.com/sync')
-    @service_id = 1000000137
+    @service_id = 1000000237
     @https = Net::HTTP.new(@endpoint.host, @endpoint.port)
     @https.use_ssl = true
   end
 
-  def make_payment(params)
+  def payment_request(params)
     request = Net::HTTP::Post.new(@endpoint)
     request['x-API-key'] = @api_key
     request['Content-Type'] = 'application/json'
