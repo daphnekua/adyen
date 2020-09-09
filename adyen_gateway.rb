@@ -10,7 +10,7 @@ class AdyenGateway
     @api_key = API_KEY
     @terminal = TERMINAL
     @endpoint = URI('https://terminal-api-test.adyen.com/sync')
-    @service_id = 1000000337
+    @service_id = 1000000500
     @https = Net::HTTP.new(@endpoint.host, @endpoint.port)
     @https.use_ssl = true
   end
@@ -92,7 +92,7 @@ class AdyenGateway
           MessageCategory: 'Abort',
           MessageType: 'Request',
           SaleID: 'POSSystemID38746',
-          ServiceID: (@service_id - 1).to_s,
+          ServiceID: @service_id,
           POIID: @terminal
         },
         AbortRequest: {
@@ -100,7 +100,7 @@ class AdyenGateway
           MessageReference: {
             MessageCategory: 'Payment',
             SaleID: 'POSSystemID38748',
-            ServiceID: @service_id.to_s
+            ServiceID: (@service_id - 1).to_s
           }
         }
       }
